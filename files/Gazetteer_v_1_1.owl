@@ -1,0 +1,3429 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY ns "http://creativecommons.org/ns#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY geosparql "http://www.opengis.net/ont/geosparql#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Gazetter "http://www.semanticweb.org/ontologies/Gazetter#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/Gazetter#"
+     xml:base="http://www.semanticweb.org/ontologies/Gazetter"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:Gazetter="http://www.semanticweb.org/ontologies/Gazetter#"
+     xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/Gazetter">
+        <terms:modified rdf:datatype="&xsd;date">2012-02-14</terms:modified>
+        <dc:date rdf:datatype="&xsd;date">2012-04-30</dc:date>
+        <dc:description rdf:datatype="&xsd;string">An RDF/OWL vocabulary for representing spatial information</dc:description>
+        <owl:versionInfo rdf:datatype="&xsd;string">OGC GeoSPARQL 1.0</owl:versionInfo>
+        <dc:source rdf:datatype="&xsd;string">OGC GeoSPARQL – A Geographic Query Language for RDF Data OGC 11-052r5</dc:source>
+        <dc:creator rdf:datatype="&xsd;string">Open Geospatial Consortium</dc:creator>
+        <terms:publisher>Geonames.org</terms:publisher>
+        <terms:description xml:lang="en">Expression of mappings between Geonames feature codes and equivalent classes in various ontologies such as schema.org, linkedgeodata.org, dbpedia.org, INSEE ontology.</terms:description>
+        <terms:title xml:lang="en">Mappings from Geonames codes to external classes</terms:title>
+        <rdfs:comment xml:lang="en">Those mappings are non-exhaustive and valid at the date of publication. They can be invalidated by further changes in the quoted ontologies</rdfs:comment>
+        <ns:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <terms:creator rdf:resource="http://labs.mondeca.com/foaf/mondeca.rdf#bvatant"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.geonames.org/ontology/mappings_v3.01.rdf"/>
+        <rdfs:seeAlso rdf:resource="http://www.opengis.net/def/function/ogc-geosparql/1.0"/>
+        <rdfs:seeAlso rdf:resource="http://www.opengis.net/def/rule/ogc-geosparql/1.0"/>
+        <rdfs:seeAlso rdf:resource="http://www.opengis.net/doc/IS/geosparql/1.0"/>
+        <dc:source rdf:resource="http://www.opengis.net/doc/IS/geosparql/1.0"/>
+        <owl:imports rdf:resource="http://www.opengis.net/ont/gml"/>
+        <owl:imports rdf:resource="http://www.opengis.net/ont/sf"/>
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/ontologies/Gazetter"/>
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <rdf:Description rdf:about="&dc;contributor">
+        <rdfs:label xml:lang="en">Contributor</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributor-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <rdf:Description rdf:about="&dc;creator">
+        <rdfs:label xml:lang="en">Creator</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#creator-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <rdf:Description rdf:about="&dc;date">
+        <rdfs:label xml:lang="en">Date</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#date-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <rdf:Description rdf:about="&dc;description">
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#description-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <rdf:Description rdf:about="&dc;source">
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#source-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="&terms;description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <owl:AnnotationProperty rdf:about="&terms;hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="&terms;issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="&terms;modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="&terms;publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="&terms;title"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#relation -->
+
+    <owl:AnnotationProperty rdf:about="&Gazetter;relation"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="&skos;altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="&skos;definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="&skos;note"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="&skos;prefLabel"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:AnnotationProperty rdf:about="&foaf;name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#gmlLiteral -->
+
+    <rdfs:Datatype rdf:about="&geosparql;gmlLiteral">
+        <rdfs:label xml:lang="en">GML Literal</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:description xml:lang="en">
+      A GML serialization of a geometry object.
+    </dc:description>
+        <skos:definition xml:lang="en">
+      A GML serialization of a geometry object.
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      A GML serialization of a geometry object.
+    </rdfs:comment>
+        <skos:prefLabel xml:lang="en">GML Literal</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#wktLiteral -->
+
+    <rdfs:Datatype rdf:about="&geosparql;wktLiteral">
+        <rdfs:label xml:lang="en">Well-known Text Literal</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:description xml:lang="en">
+      A Well-known Text serialization of a geometry object.
+    </dc:description>
+        <skos:definition xml:lang="en">
+      A Well-known Text serialization of a geometry object.
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      A Well-known Text serialization of a geometry object.
+    </rdfs:comment>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:prefLabel xml:lang="en">Well-known Text Literal</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://www.opengis.net/ont/sf#wktLiteral -->
+
+    <rdfs:Datatype rdf:about="http://www.opengis.net/ont/sf#wktLiteral"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.geonames.org/ontology#featureClass -->
+
+    <owl:ObjectProperty rdf:about="http://www.geonames.org/ontology#featureClass"/>
+    
+
+
+    <!-- http://www.geonames.org/ontology#featureCode -->
+
+    <owl:ObjectProperty rdf:about="http://www.geonames.org/ontology#featureCode"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#defaultGeometry -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;defaultGeometry">
+        <rdfs:label xml:lang="en">defaultGeometry</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:definition xml:lang="en">
+      The default geometry to be used in spatial calculations.
+      It is Usually the most detailed geometry.
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      The default geometry to be used in spatial calculations.
+      It is Usually the most detailed geometry.
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      The default geometry to be used in spatial calculations.
+      It is Usually the most detailed geometry.
+    </dc:description>
+        <skos:prefLabel xml:lang="en">defaultGeometry</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;Feature"/>
+        <rdfs:range rdf:resource="&geosparql;Geometry"/>
+        <rdfs:subPropertyOf rdf:resource="&geosparql;hasGeometry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehContains -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;ehContains">
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*TFF*FF*
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*TFF*FF*
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*TFF*FF*
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">contains</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehCoveredBy -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;ehCoveredBy">
+        <rdfs:label xml:lang="en">coveredBy</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFF*TFT**
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFF*TFT**
+    </skos:definition>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFF*TFT**
+    </dc:description>
+        <skos:prefLabel xml:lang="en">coveredBy</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehCovers -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;ehCovers">
+        <rdfs:label xml:lang="en">covers</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: T*TFT*FF*
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: T*TFT*FF*
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: T*TFT*FF*
+    </dc:description>
+        <skos:prefLabel xml:lang="en">covers</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehDisjoint -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;ehDisjoint">
+        <rdfs:label xml:lang="en">disjoint</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </dc:description>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </rdfs:comment>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:prefLabel xml:lang="en">disjoint</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehEquals -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;ehEquals">
+        <rdfs:label xml:lang="en">equals</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </dc:description>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </rdfs:comment>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:prefLabel xml:lang="en">equals</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehInside -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;ehInside">
+        <rdfs:label xml:lang="en">inside</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFF*FFT**
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFF*FFT**
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFF*FFT**
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">inside</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehMeet -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;ehMeet">
+        <rdfs:label xml:lang="en">meet</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. 
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </dc:description>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. 
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. 
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">meet</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehOverlap -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;ehOverlap">
+        <rdfs:label xml:lang="en">overlap</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T**
+    </dc:description>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T**
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T**
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">overlap</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#hasGeometry -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;hasGeometry">
+        <rdfs:label xml:lang="en">hasGeometry</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:description xml:lang="en">
+      A spatial representation for a given feature.
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      A spatial representation for a given feature.
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      A spatial representation for a given feature.
+    </skos:definition>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:prefLabel xml:lang="en">hasGeometry</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;Feature"/>
+        <rdfs:range rdf:resource="&geosparql;Geometry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8dc -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;rcc8dc">
+        <rdfs:label xml:lang="en">disconnected</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FFTFFTTTT
+    </rdfs:comment>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FFTFFTTTT
+    </skos:definition>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FFTFFTTTT
+    </dc:description>
+        <skos:prefLabel xml:lang="en">disconnected</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8ec -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;rcc8ec">
+        <rdfs:label xml:lang="en">externally connected</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. DE-9IM: FFTFTTTTT
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. DE-9IM: FFTFTTTTT
+    </skos:definition>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. DE-9IM: FFTFTTTTT
+    </dc:description>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:prefLabel xml:lang="en">externally connected</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8eq -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;rcc8eq">
+        <rdfs:label xml:lang="en">equals</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </dc:description>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </rdfs:comment>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:prefLabel xml:lang="en">equals</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8ntpp -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;rcc8ntpp">
+        <rdfs:label xml:lang="en">non-tangential proper part</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFFTFFTTT
+    </skos:definition>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFFTFFTTT
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFFTFFTTT
+    </rdfs:comment>
+        <skos:prefLabel xml:lang="en">non-tangential proper part</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8ntppi -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;rcc8ntppi">
+        <rdfs:label xml:lang="en">non-tangential proper part inverse</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: TTTFFTFFT
+    </dc:description>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: TTTFFTFFT
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: TTTFFTFFT
+    </skos:definition>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:prefLabel xml:lang="en">non-tangential proper part inverse</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8po -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;rcc8po">
+        <rdfs:label xml:lang="en">partially overlapping</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: TTTTTTTTT
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: TTTTTTTTT
+    </dc:description>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: TTTTTTTTT
+    </skos:definition>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:prefLabel xml:lang="en">partially overlapping</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8tpp -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;rcc8tpp">
+        <rdfs:label xml:lang="en">tangential proper part</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFFTTFTTT
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFFTTFTTT
+    </skos:definition>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFFTTFTTT
+    </dc:description>
+        <skos:prefLabel xml:lang="en">tangential proper part</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8tppi -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;rcc8tppi">
+        <rdfs:label xml:lang="en">tangential proper part inverse</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: TTTFTTFFT
+    </skos:definition>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: TTTFTTFFT
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: TTTFTTFFT
+    </dc:description>
+        <skos:prefLabel xml:lang="en">tangential proper part inverse</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfContains -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;sfContains">
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*****FF*
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*****FF*
+    </dc:description>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*****FF*
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">contains</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfCrosses -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;sfCrosses">
+        <rdfs:label xml:lang="en">crosses</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially crosses the 
+      object SpatialObject. DE-9IM: T*T******
+    </dc:description>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially crosses the 
+      object SpatialObject. DE-9IM: T*T******
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially crosses the 
+      object SpatialObject. DE-9IM: T*T******
+    </rdfs:comment>
+        <skos:prefLabel xml:lang="en">crosses</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfDisjoint -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;sfDisjoint">
+        <rdfs:label xml:lang="en">disjoint</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint 
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint 
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </dc:description>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint 
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </skos:definition>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:prefLabel xml:lang="en">disjoint</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfEquals -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;sfEquals">
+        <rdfs:label xml:lang="en">equals</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </dc:description>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </skos:definition>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:prefLabel xml:lang="en">equals</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfIntersects -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;sfIntersects">
+        <rdfs:label xml:lang="en">intersects</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is not spatially disjoint 
+      from the object SpatialObject.
+      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** 
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is not spatially disjoint 
+      from the object SpatialObject.
+      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** 
+    </skos:definition>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is not spatially disjoint 
+      from the object SpatialObject.
+      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** 
+    </dc:description>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:prefLabel xml:lang="en">intersects</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfOverlaps -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;sfOverlaps">
+        <rdfs:label xml:lang="en">overlaps</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T** 
+    </skos:definition>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T** 
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T** 
+    </dc:description>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:prefLabel xml:lang="en">overlaps</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfTouches -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;sfTouches">
+        <rdfs:label xml:lang="en">touches</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially touches the 
+      object SpatialObject.
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </dc:description>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially touches the 
+      object SpatialObject.
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially touches the 
+      object SpatialObject.
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">touches</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfWithin -->
+
+    <owl:ObjectProperty rdf:about="&geosparql;sfWithin">
+        <rdfs:label xml:lang="en">within</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <skos:altLabel rdf:datatype="&xsd;string">dentro</skos:altLabel>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is spatially within the 
+      object SpatialObject. DE-9IM: T*F**F***
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is spatially within the 
+      object SpatialObject. DE-9IM: T*F**F***
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is spatially within the 
+      object SpatialObject. DE-9IM: T*F**F***
+    </skos:definition>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:prefLabel xml:lang="en">within</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:range rdf:resource="&geosparql;SpatialObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#above -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;above">
+        <rdfs:label rdf:datatype="&xsd;string">above</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">acima</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#access -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;access">
+        <rdfs:label rdf:datatype="&xsd;string">access</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">acesso</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#after -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;after">
+        <rdfs:label rdf:datatype="&xsd;string">after</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">depois</skos:altLabel>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#along -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;along">
+        <rdfs:label rdf:datatype="&xsd;string">along</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">ao longo</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#before -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;before">
+        <rdfs:label rdf:datatype="&xsd;string">before</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">antes</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#behind -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;behind">
+        <rdfs:label rdf:datatype="&xsd;string">behind</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">atrás</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#below -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;below">
+        <rdfs:label rdf:datatype="&xsd;string">below</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">abaixo</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#between -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;between">
+        <rdfs:label rdf:datatype="&xsd;string">between</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">entre
+</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#border -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;border">
+        <skos:altLabel rdf:datatype="&xsd;string">beira</skos:altLabel>
+        <skos:altLabel rdf:datatype="&xsd;string">borda</skos:altLabel>
+        <skos:altLabel rdf:datatype="&xsd;string">fronteira</skos:altLabel>
+        <skos:altLabel rdf:datatype="&xsd;string">margem</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#derection -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;derection">
+        <rdfs:label rdf:datatype="&xsd;string">direction</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">direcao</skos:altLabel>
+        <skos:altLabel rdf:datatype="&xsd;string">direção</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#east -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;east">
+        <rdfs:label rdf:datatype="&xsd;string">east</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">leste</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#flowing -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;flowing">
+        <rdfs:label rdf:datatype="&xsd;string">flowing</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">afluente</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#hasCounty -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;hasCounty"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#km -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;km">
+        <skos:altLabel rdf:datatype="&xsd;string">kilometros</skos:altLabel>
+        <skos:altLabel xml:lang="pt">quilometros</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#left_margin -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;left_margin">
+        <rdfs:label rdf:datatype="&xsd;string">left margin</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">marg</skos:altLabel>
+        <skos:altLabel rdf:datatype="&xsd;string">margem esquerda</skos:altLabel>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#margin -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;margin">
+        <rdfs:label rdf:datatype="&xsd;string">margin</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">margem</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#minutes -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;minutes">
+        <rdfs:label rdf:datatype="&xsd;string">minutes</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">minutos</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#near -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;near">
+        <rdfs:label rdf:datatype="&xsd;string">near</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">perto</skos:altLabel>
+        <skos:altLabel rdf:datatype="&xsd;string">proximidades</skos:altLabel>
+        <skos:altLabel rdf:datatype="&xsd;string">proximo</skos:altLabel>
+        <skos:altLabel rdf:datatype="&xsd;string">próximo</skos:altLabel>
+        <skos:altLabel xml:lang="pt">proximas</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#north -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;north">
+        <rdfs:label rdf:datatype="&xsd;string">north</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">norte</skos:altLabel>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#northeast -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;northeast">
+        <rdfs:label rdf:datatype="&xsd;string">northeast</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">nordeste</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#northwest -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;northwest">
+        <rdfs:label rdf:datatype="&xsd;string">northwest</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">noroeste</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#notGeometry -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;notGeometry"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#out -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;out">
+        <rdfs:label rdf:datatype="&xsd;string">out</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">fora</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#partyOf -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;partyOf">
+        <rdfs:label rdf:datatype="&xsd;string">party_of</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">faz parte</skos:altLabel>
+        <skos:altLabel xml:lang="pt"> part-of</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#right -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;right">
+        <rdfs:label rdf:datatype="&xsd;string">right</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">direita</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#right_margin -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;right_margin">
+        <rdfs:label rdf:datatype="&xsd;string">right margin</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">margem direita</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#river_hole -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;river_hole">
+        <rdfs:label rdf:datatype="&xsd;string">river_hole</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">furo</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#sameAs -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;sameAs"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#side -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;side">
+        <rdfs:label rdf:datatype="&xsd;string">side</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">lado</skos:altLabel>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#south -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;south">
+        <rdfs:label rdf:datatype="&xsd;string">south</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">sul</skos:altLabel>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#southeast -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;southeast">
+        <rdfs:label rdf:datatype="&xsd;string">southeast</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">sudeste</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#southwest -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;southwest">
+        <rdfs:label rdf:datatype="&xsd;string">southwest</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">sudoeste</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#west -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;west">
+        <rdfs:label rdf:datatype="&xsd;string">west</rdfs:label>
+        <skos:altLabel rdf:datatype="&xsd;string">oeste</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#wrong -->
+
+    <owl:ObjectProperty rdf:about="&Gazetter;wrong">
+        <skos:altLabel xml:lang="pt">capoeirão</skos:altLabel>
+        <skos:altLabel xml:lang="pt">florístico</skos:altLabel>
+        <skos:altLabel xml:lang="pt">levantamento</skos:altLabel>
+        <skos:altLabel xml:lang="pt">terra preta</skos:altLabel>
+        <skos:altLabel xml:lang="pt">água preta</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#asGML -->
+
+    <owl:DatatypeProperty rdf:about="&geosparql;asGML">
+        <rdfs:label xml:lang="en">asGML</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <rdfs:comment xml:lang="en">
+      The GML serialization of a geometry
+    </rdfs:comment>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:description xml:lang="en">
+      The GML serialization of a geometry
+    </dc:description>
+        <skos:definition xml:lang="en">
+      The GML serialization of a geometry
+    </skos:definition>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:prefLabel xml:lang="en">asGML</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;Geometry"/>
+        <rdfs:range rdf:resource="&geosparql;gmlLiteral"/>
+        <rdfs:subPropertyOf rdf:resource="&geosparql;hasSerialization"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#asWKT -->
+
+    <owl:DatatypeProperty rdf:about="&geosparql;asWKT">
+        <rdfs:label xml:lang="en">asWKT</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <rdfs:comment xml:lang="en">
+      The WKT serialization of a geometry
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      The WKT serialization of a geometry
+    </skos:definition>
+        <dc:description xml:lang="en">
+      The WKT serialization of a geometry
+    </dc:description>
+        <skos:prefLabel xml:lang="en">asWKT</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;Geometry"/>
+        <rdfs:subPropertyOf rdf:resource="&geosparql;hasSerialization"/>
+        <rdfs:range rdf:resource="&geosparql;wktLiteral"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#coordinateDimension -->
+
+    <owl:DatatypeProperty rdf:about="&geosparql;coordinateDimension">
+        <rdfs:label xml:lang="en">coordinateDimension</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <rdfs:comment xml:lang="en">
+      The number of measurements or axes needed to describe the position of this
+      geometry in a coordinate system.
+    </rdfs:comment>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:description xml:lang="en">
+      The number of measurements or axes needed to describe the position of this
+      geometry in a coordinate system.
+    </dc:description>
+        <skos:definition xml:lang="en">
+      The number of measurements or axes needed to describe the position of this
+      geometry in a coordinate system.
+    </skos:definition>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:prefLabel xml:lang="en">coordinateDimension</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;Geometry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#dimension -->
+
+    <owl:DatatypeProperty rdf:about="&geosparql;dimension">
+        <rdfs:label xml:lang="en">dimension</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <rdfs:comment xml:lang="en">
+      The topological dimension of this geometric object, which 
+      must be less than or equal to the coordinate dimension. 
+      In non-homogeneous collections, this will return the largest 
+      topological dimension of the contained objects.
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      The topological dimension of this geometric object, which 
+      must be less than or equal to the coordinate dimension. 
+      In non-homogeneous collections, this will return the largest 
+      topological dimension of the contained objects.
+    </dc:description>
+        <skos:definition xml:lang="en">
+      The topological dimension of this geometric object, which 
+      must be less than or equal to the coordinate dimension. 
+      In non-homogeneous collections, this will return the largest 
+      topological dimension of the contained objects.
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">dimension</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;Geometry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#hasSerialization -->
+
+    <owl:DatatypeProperty rdf:about="&geosparql;hasSerialization">
+        <rdfs:label xml:lang="en">has serialization</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:definition xml:lang="en">
+      Connects a geometry object with its text-based serialization.
+    </skos:definition>
+        <dc:description xml:lang="en">
+      Connects a geometry object with its text-based serialization.
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      Connects a geometry object with its text-based serialization.
+    </rdfs:comment>
+        <skos:prefLabel xml:lang="en">has serialization</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;Geometry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#isEmpty -->
+
+    <owl:DatatypeProperty rdf:about="&geosparql;isEmpty">
+        <rdfs:label xml:lang="en">isEmpty</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:definition xml:lang="en">
+      (true) if this geometric object is the empty Geometry. If 
+      true, then this geometric object represents the empty point 
+      set for the coordinate space.
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      (true) if this geometric object is the empty Geometry. If 
+      true, then this geometric object represents the empty point 
+      set for the coordinate space.
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      (true) if this geometric object is the empty Geometry. If 
+      true, then this geometric object represents the empty point 
+      set for the coordinate space.
+    </dc:description>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:prefLabel xml:lang="en">isEmpty</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;Geometry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#isSimple -->
+
+    <owl:DatatypeProperty rdf:about="&geosparql;isSimple">
+        <rdfs:label xml:lang="en">isSimple</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:definition xml:lang="en">
+      (true) if this geometric object has no anomalous geometric 
+      points, such as self intersection or self tangency.
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      (true) if this geometric object has no anomalous geometric 
+      points, such as self intersection or self tangency.
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      (true) if this geometric object has no anomalous geometric 
+      points, such as self intersection or self tangency.
+    </dc:description>
+        <skos:prefLabel xml:lang="en">isSimple</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;Geometry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#spatialDimension -->
+
+    <owl:DatatypeProperty rdf:about="&geosparql;spatialDimension">
+        <rdfs:label xml:lang="en">spatialDimension</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:definition xml:lang="en">
+      The number of measurements or axes needed to describe the spatial position of 
+      this geometry in a coordinate system.
+    </skos:definition>
+        <dc:description xml:lang="en">
+      The number of measurements or axes needed to describe the spatial position of 
+      this geometry in a coordinate system.
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      The number of measurements or axes needed to describe the spatial position of 
+      this geometry in a coordinate system.
+    </rdfs:comment>
+        <skos:prefLabel xml:lang="en">spatialDimension</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geosparql;Geometry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#agreement -->
+
+    <owl:DatatypeProperty rdf:about="&Gazetter;agreement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#contributors -->
+
+    <owl:DatatypeProperty rdf:about="&Gazetter;contributors">
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#county -->
+
+    <owl:DatatypeProperty rdf:about="&Gazetter;county">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#date -->
+
+    <owl:DatatypeProperty rdf:about="&Gazetter;date">
+        <rdfs:range rdf:resource="&xsd;date"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#infotype -->
+
+    <owl:DatatypeProperty rdf:about="&Gazetter;infotype"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#locality -->
+
+    <owl:DatatypeProperty rdf:about="&Gazetter;locality">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#ntriples -->
+
+    <owl:DatatypeProperty rdf:about="&Gazetter;ntriples"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/Airport -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Airport">
+        <rdfs:label xml:lang="en">Airport</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Airport"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">Aeroporto</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Atoll -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Atoll">
+        <rdfs:label xml:lang="en">Atoll</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Bridge -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Bridge">
+        <rdfs:label xml:lang="en">Bridge</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Bridge"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Building -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Building">
+        <rdfs:label xml:lang="en">Building</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">construcao</skos:altLabel>
+        <skos:altLabel xml:lang="pt">construção</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Canal -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Canal">
+        <rdfs:label xml:lang="en">Canal</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Canal"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Cave -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Cave">
+        <rdfs:label xml:lang="en">Cave</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Cave"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">caverna</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Church -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Church">
+        <rdfs:label xml:lang="en">Church</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Church"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">igreja</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Community -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Community">
+        <rdfs:label xml:lang="en">community</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">comunidade</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Continent -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Continent">
+        <rdfs:label xml:lang="en">Continent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Country -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Country">
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Country"/>
+        <rdfs:subClassOf rdf:resource="http://schema.org/AdministrativeArea"/>
+        <skos:altLabel xml:lang="pt">pais</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/HistoricPlace -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/HistoricPlace">
+        <rdfs:label xml:lang="en">Historic Place</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Historic"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Hospital -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Hospital">
+        <rdfs:label xml:lang="en">Hospital</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Hospital"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Hotel -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Hotel">
+        <rdfs:label xml:lang="en">Hotel</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Hotel"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Island -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Island">
+        <rdfs:label rdf:datatype="&xsd;language">Island</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/River"/>
+        <skos:altLabel xml:lang="pt">ilha</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Lake -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Lake">
+        <rdfs:label xml:lang="en">Lake</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://schema.org/LakeBodyOfWater"/>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/River"/>
+        <skos:altLabel xml:lang="pt">igarapé</skos:altLabel>
+        <skos:altLabel xml:lang="pt">lago</skos:altLabel>
+        <skos:altLabel xml:lang="pt">lagos</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Lighthouse -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Lighthouse">
+        <rdfs:label xml:lang="en">Lighthouse</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Lighthouse"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Monument -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Monument">
+        <rdfs:label xml:lang="en">Monument</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Monument"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Mountain -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Mountain">
+        <rdfs:label xml:lang="en">Mountain</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://schema.org/Mountain"/>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/River"/>
+        <skos:altLabel xml:lang="pt">montanha</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/MountainPass -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/MountainPass">
+        <rdfs:label xml:lang="en">Mountain Pass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Museum -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Museum">
+        <rdfs:label xml:lang="en">Museum</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://schema.org/Museum"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Park -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Park">
+        <rdfs:label xml:lang="en">Park</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://schema.org/Park"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">parque</skos:altLabel>
+        <skos:altLabel xml:lang="pt">parque nacional
+</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/PowerStation -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/PowerStation">
+        <rdfs:label xml:lang="en">Power Station</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/PowerStation"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/ProtectedArea -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/ProtectedArea">
+        <rdfs:label xml:lang="en">ProtectedArea</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="en">reserve</skos:altLabel>
+        <skos:altLabel xml:lang="pt">ZF2</skos:altLabel>
+        <skos:altLabel xml:lang="pt">ZF3</skos:altLabel>
+        <skos:altLabel xml:lang="pt">estação ecológica</skos:altLabel>
+        <skos:altLabel xml:lang="pt">floresta estadual</skos:altLabel>
+        <skos:altLabel xml:lang="pt">floresta nacional</skos:altLabel>
+        <skos:altLabel xml:lang="pt">national park</skos:altLabel>
+        <skos:altLabel xml:lang="pt">parque</skos:altLabel>
+        <skos:altLabel xml:lang="pt">parque nacional</skos:altLabel>
+        <skos:altLabel xml:lang="pt">proteção ambiental</skos:altLabel>
+        <skos:altLabel xml:lang="pt">reserva</skos:altLabel>
+        <skos:altLabel xml:lang="pt">reserva extrativista</skos:altLabel>
+        <skos:altLabel xml:lang="pt">reserva florestal</skos:altLabel>
+        <skos:altLabel xml:lang="pt">reservas</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/RailwayTunnel -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/RailwayTunnel">
+        <rdfs:label xml:lang="en">Railway Tunnel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Restaurant -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Restaurant">
+        <rdfs:label xml:lang="en">Restaurant</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Restaurant"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/River -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/River">
+        <rdfs:label>River</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/ProtectedArea"/>
+        <skos:altLabel xml:lang="pt">Rio</skos:altLabel>
+        <skos:altLabel xml:lang="pt">rio</skos:altLabel>
+        <skos:altLabel xml:lang="pt">rios</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Road -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Road">
+        <rdfs:label xml:lang="en">Road</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology/mappings#Higway"/>
+        <skos:altLabel xml:lang="en">road</skos:altLabel>
+        <skos:altLabel xml:lang="pt">br</skos:altLabel>
+        <skos:altLabel xml:lang="pt">estrada</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/RoadJunction -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/RoadJunction">
+        <rdfs:label xml:lang="en">Road Junction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/RoadTunnel -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/RoadTunnel">
+        <rdfs:label xml:lang="en">Road Tunnel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/ShoppingMall -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/ShoppingMall">
+        <rdfs:label xml:lang="en">Shopping Mall</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Mall"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Stadium -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Stadium">
+        <rdfs:label xml:lang="en">Stadium</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Stadium"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Stream -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Stream">
+        <rdfs:label xml:lang="en">Stream</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Stream"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Theatre -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Theatre">
+        <rdfs:label xml:lang="en">Theatre</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Theatre"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Tunnel -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Tunnel">
+        <rdfs:label xml:lang="en">Tunnel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Valley -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Valley">
+        <rdfs:label xml:lang="en">Valley</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">vale</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Village -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Village">
+        <rdfs:label rdf:datatype="&xsd;language">Village</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://schema.org/City"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology/mappings#Township"/>
+        <skos:altLabel xml:lang="pt">aldeia</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/AbandonedStation -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/AbandonedStation">
+        <rdfs:label xml:lang="en">Abandoned Station</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">Estação Abandonada</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Aerodrome -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Aerodrome">
+        <rdfs:label xml:lang="en">Aerodrome</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Airport -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Airport">
+        <rdfs:label xml:lang="en">Airport</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">aeroporto</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Aqueduct -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Aqueduct">
+        <rdfs:label xml:lang="en">Aqueduct</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">aqueduto</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Barracks -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Barracks">
+        <rdfs:label xml:lang="en">Barracks</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Battlefield -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Battlefield">
+        <rdfs:label xml:lang="en">Battlefield</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Beach -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Beach">
+        <rdfs:label xml:lang="en">Beach</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <rdfs:comment xml:lang="pt">praia</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Bridge -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Bridge">
+        <rdfs:label xml:lang="en">Bridge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">ponte</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/BusStation -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/BusStation">
+        <rdfs:label xml:lang="en">Bus Station</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/BusStop -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/BusStop">
+        <rdfs:label xml:lang="en">Bus Stop</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Canal -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Canal">
+        <rdfs:label xml:lang="en">Canal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Cape -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Cape">
+        <rdfs:label xml:lang="en">Cape</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Casino -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Casino">
+        <rdfs:label xml:lang="en">Casino</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Castle -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Castle">
+        <rdfs:label xml:lang="en">Castle</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Cave -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Cave">
+        <rdfs:label xml:lang="en">Cave</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Cemetery -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Cemetery">
+        <rdfs:label xml:lang="en">Cemetery</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/GraveYard"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">ceminterio</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Church -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Church">
+        <rdfs:label xml:lang="en">Church</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://schema.org/Church"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/CommunityCentre -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/CommunityCentre">
+        <rdfs:label xml:lang="en">Community Centre</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">centro comunitario</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Country -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Country">
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://rdf.geospecies.org/ont/geospecies#Country"/>
+        <rdfs:subClassOf rdf:resource="http://schema.org/AdministrativeArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Courthouse -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Courthouse">
+        <rdfs:label xml:lang="en">Courthouse</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Dam -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Dam">
+        <rdfs:label xml:lang="en">Dam</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology/mappings#Hydroelectric"/>
+        <skos:altLabel xml:lang="pt">represa</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Ditch -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Ditch">
+        <rdfs:label xml:lang="en">Ditch</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Farm -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Farm">
+        <rdfs:label xml:lang="en">Farm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">fazenda</skos:altLabel>
+        <skos:altLabel xml:lang="pt">sitio</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Fjord -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Fjord">
+        <rdfs:label xml:lang="en">Fjord</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Garden -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Garden">
+        <rdfs:label xml:lang="en">Garden</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">jardim</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Geyser -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Geyser">
+        <rdfs:label xml:lang="en">Geyser</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Glacier -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Glacier">
+        <rdfs:label xml:lang="en">Glacier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/GolfCourse -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/GolfCourse">
+        <rdfs:label xml:lang="en">Golf Course</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://schema.org/GolfCourse"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/GraveYard -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/GraveYard">
+        <rdfs:label xml:lang="en">Graveyard</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://schema.org/Cemetery"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Harbour -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Harbour">
+        <rdfs:label xml:lang="en">Harbour</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">porto</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Heliport -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Heliport">
+        <rdfs:label xml:lang="en">Heliport</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Hill -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Hill">
+        <rdfs:label xml:lang="en">Hill</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">morro</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Historic -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Historic">
+        <rdfs:label xml:lang="en">Historic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Hospital -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Hospital">
+        <rdfs:label xml:lang="en">Hospital</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://schema.org/Hospital"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/HotSpring -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/HotSpring">
+        <rdfs:label xml:lang="en">Hot Spring</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Hotel -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Hotel">
+        <rdfs:label xml:lang="en">Hotel</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://schema.org/Hotel"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Islet -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Islet">
+        <rdfs:label xml:lang="en">Islet</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Landfill -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Landfill">
+        <rdfs:label xml:lang="en">Landfill</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Library -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Library">
+        <rdfs:label xml:lang="en">Library</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://schema.org/Library"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Lighthouse -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Lighthouse">
+        <rdfs:label xml:lang="en">Lighthouse</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Mall -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Mall">
+        <rdfs:label xml:lang="en">Mall</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <rdfs:comment xml:lang="en">supermercado</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Meadow -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Meadow">
+        <rdfs:label xml:lang="en">Meadow</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Mill -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Mill">
+        <rdfs:label xml:lang="en">Mill</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Mine -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Mine">
+        <rdfs:label xml:lang="en">Mine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">mina</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Monastery -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Monastery">
+        <rdfs:label xml:lang="en">Monastery</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Monument -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Monument">
+        <rdfs:label xml:lang="en">Monument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Moor -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Moor">
+        <rdfs:label xml:lang="en">Moor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Observatory -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Observatory">
+        <rdfs:label xml:lang="en">Observatory</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Palace -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Palace">
+        <rdfs:label xml:lang="en">Palace</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Peak -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Peak">
+        <rdfs:label xml:lang="en">Peak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/River"/>
+        <skos:altLabel xml:lang="pt">pico</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Peninsula -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Peninsula">
+        <rdfs:label xml:lang="en">Peninsula</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/PetroleumWell -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/PetroleumWell">
+        <rdfs:label xml:lang="en">Petroleum Well</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Pier -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Pier">
+        <rdfs:label xml:lang="en">Pier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Plain -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Plain">
+        <rdfs:label xml:lang="en">Plain</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Plateau -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Plateau">
+        <rdfs:label xml:lang="en">Plateau</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/PowerStation -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/PowerStation">
+        <rdfs:label xml:lang="en">Power Station</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Prison -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Prison">
+        <rdfs:label xml:lang="en">Prison</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Quarry -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Quarry">
+        <rdfs:label xml:lang="en">Quarry</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/RailwayJunction -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/RailwayJunction">
+        <rdfs:label xml:lang="en">Railway Junction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/RailwayStation -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/RailwayStation">
+        <rdfs:label xml:lang="en">Railway Station</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/TrainStation"/>
+        <owl:equivalentClass rdf:resource="http://schema.org/TrainStation"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/RailwayStop -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/RailwayStop">
+        <rdfs:label xml:lang="en">Railway Stop</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Rapids -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Rapids">
+        <rdfs:label xml:lang="en">Rapids</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Reef -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Reef">
+        <rdfs:label xml:lang="en">Reef</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Resort -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Resort">
+        <rdfs:label xml:lang="en">Resort</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Restaurant -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Restaurant">
+        <rdfs:label xml:lang="en">Restaurant</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://schema.org/Restaurant"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Ridge -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Ridge">
+        <rdfs:label xml:lang="en">Ridge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/River"/>
+        <skos:altLabel xml:lang="pt">cordilheira</skos:altLabel>
+        <skos:altLabel xml:lang="pt">serra</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Rocks -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Rocks">
+        <rdfs:label xml:lang="en">Rocks</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/School -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/School">
+        <rdfs:label xml:lang="en">School</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkedgeodata.org/ontology/University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Stadium -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Stadium">
+        <rdfs:label xml:lang="en">Stadium</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://schema.org/StadiumOrArena"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Stream -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Stream">
+        <rdfs:label xml:lang="en">Stream</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Theatre -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Theatre">
+        <rdfs:label xml:lang="en">Theatre</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/TrainStation -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/TrainStation">
+        <rdfs:label xml:lang="en">Train Station</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://schema.org/TrainStation"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/University -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/University">
+        <rdfs:label xml:lang="en">University</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">Campus</skos:altLabel>
+        <skos:altLabel xml:lang="pt">Universidade</skos:altLabel>
+        <skos:altLabel xml:lang="pt">universitário</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Vineyard -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Vineyard">
+        <rdfs:label xml:lang="en">Vineyard</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Volcano -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Volcano">
+        <rdfs:label xml:lang="en">Volcano</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://schema.org/Volcano"/>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Waterfall -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Waterfall">
+        <rdfs:label xml:lang="en">Waterfall</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://schema.org/Waterfall"/>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/River"/>
+        <skos:altLabel xml:lang="pt">cachoeira</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Weir -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Weir">
+        <rdfs:label xml:lang="en">Weir</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkedgeodata.org/ontology/Windmill -->
+
+    <owl:Class rdf:about="http://linkedgeodata.org/ontology/Windmill">
+        <rdfs:label xml:lang="en">Windmill</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://rdf.geospecies.org/ont/geospecies#Country -->
+
+    <owl:Class rdf:about="http://rdf.geospecies.org/ont/geospecies#Country">
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://schema.org/AdministrativeArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://rdf.insee.fr/geo/Arrondissement -->
+
+    <owl:Class rdf:about="http://rdf.insee.fr/geo/Arrondissement">
+        <rdfs:label xml:lang="fr">Arrondissement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://schema.org/AdministrativeArea"/>
+        <rdfs:isDefinedBy rdf:resource="http://data.lirmm.fr/ontologies/geo-fr#Arrondissement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://rdf.insee.fr/geo/Departement -->
+
+    <owl:Class rdf:about="http://rdf.insee.fr/geo/Departement">
+        <rdfs:label xml:lang="fr">Département</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://schema.org/AdministrativeArea"/>
+        <rdfs:isDefinedBy rdf:resource="http://data.lirmm.fr/ontologies/geo-fr#Departement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/AdministrativeArea -->
+
+    <owl:Class rdf:about="http://schema.org/AdministrativeArea">
+        <rdfs:label xml:lang="en">AdministrativeArea</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">Área Administrativa</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Cemetery -->
+
+    <owl:Class rdf:about="http://schema.org/Cemetery">
+        <rdfs:label xml:lang="en">Cemetery</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Church -->
+
+    <owl:Class rdf:about="http://schema.org/Church">
+        <rdfs:label xml:lang="en">Church</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/City -->
+
+    <owl:Class rdf:about="http://schema.org/City">
+        <rdfs:label xml:lang="en">City</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Country"/>
+        <skos:altLabel xml:lang="pt">Cidade</skos:altLabel>
+        <skos:altLabel xml:lang="pt">municipio</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/GolfCourse -->
+
+    <owl:Class rdf:about="http://schema.org/GolfCourse">
+        <rdfs:label xml:lang="en">GolfCourse</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Hospital -->
+
+    <owl:Class rdf:about="http://schema.org/Hospital">
+        <rdfs:label xml:lang="en">Hospital</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Hotel -->
+
+    <owl:Class rdf:about="http://schema.org/Hotel">
+        <rdfs:label xml:lang="en">Hotel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/LakeBodyOfWater -->
+
+    <owl:Class rdf:about="http://schema.org/LakeBodyOfWater">
+        <rdfs:label xml:lang="en">LakeBodyOfWater</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/River"/>
+        <skos:altLabel xml:lang="pt">igarape</skos:altLabel>
+        <skos:altLabel xml:lang="pt">igarape?</skos:altLabel>
+        <skos:altLabel xml:lang="pt">igarapé</skos:altLabel>
+        <skos:altLabel xml:lang="pt">lago</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Library -->
+
+    <owl:Class rdf:about="http://schema.org/Library">
+        <rdfs:label xml:lang="en">Library</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Mosque -->
+
+    <owl:Class rdf:about="http://schema.org/Mosque">
+        <rdfs:label xml:lang="en">Mosque</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Mountain -->
+
+    <owl:Class rdf:about="http://schema.org/Mountain">
+        <rdfs:label xml:lang="en">Mountain</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/River"/>
+        <skos:altLabel xml:lang="pt">montanha
+</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Museum -->
+
+    <owl:Class rdf:about="http://schema.org/Museum">
+        <rdfs:label xml:lang="en">Museum</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Park -->
+
+    <owl:Class rdf:about="http://schema.org/Park">
+        <rdfs:label xml:lang="en">Park</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/PoliceStation -->
+
+    <owl:Class rdf:about="http://schema.org/PoliceStation">
+        <rdfs:label xml:lang="en">PoliceStation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Pond -->
+
+    <owl:Class rdf:about="http://schema.org/Pond">
+        <rdfs:label xml:lang="en">Pond</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/PostOffice -->
+
+    <owl:Class rdf:about="http://schema.org/PostOffice">
+        <rdfs:label xml:lang="en">PostOffice</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/RadioStation -->
+
+    <owl:Class rdf:about="http://schema.org/RadioStation">
+        <rdfs:label xml:lang="en">RadioStation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Reservoir -->
+
+    <owl:Class rdf:about="http://schema.org/Reservoir">
+        <rdfs:label xml:lang="en">Reservoir</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Restaurant -->
+
+    <owl:Class rdf:about="http://schema.org/Restaurant">
+        <rdfs:label xml:lang="en">Restaurant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/SeaBodyOfWater -->
+
+    <owl:Class rdf:about="http://schema.org/SeaBodyOfWater">
+        <rdfs:label xml:lang="en">SeaBodyOfWater</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/StadiumOrArena -->
+
+    <owl:Class rdf:about="http://schema.org/StadiumOrArena">
+        <rdfs:label xml:lang="en">StadiumOrArena</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/State -->
+
+    <owl:Class rdf:about="http://schema.org/State">
+        <rdfs:label xml:lang="en">State</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">estado</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Store -->
+
+    <owl:Class rdf:about="http://schema.org/Store">
+        <rdfs:label xml:lang="en">Store</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/SubwayStation -->
+
+    <owl:Class rdf:about="http://schema.org/SubwayStation">
+        <rdfs:label xml:lang="en">SubwayStation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/TrainStation -->
+
+    <owl:Class rdf:about="http://schema.org/TrainStation">
+        <rdfs:label xml:lang="en">Train Station</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Volcano -->
+
+    <owl:Class rdf:about="http://schema.org/Volcano">
+        <rdfs:label xml:lang="en">Volcano</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Waterfall -->
+
+    <owl:Class rdf:about="http://schema.org/Waterfall">
+        <rdfs:label xml:lang="en">Waterfall</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/River"/>
+        <skos:altLabel xml:lang="pt">cachoeira</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Zoo -->
+
+    <owl:Class rdf:about="http://schema.org/Zoo">
+        <rdfs:label xml:lang="en">Zoo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">zoologico</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geonames.org/ontology#Feature -->
+
+    <owl:Class rdf:about="http://www.geonames.org/ontology#Feature">
+        <owl:equivalentClass rdf:resource="&geosparql;Feature"/>
+        <rdfs:subClassOf rdf:resource="&geosparql;SpatialObject"/>
+        <skos:altLabel xml:lang="en">place</skos:altLabel>
+        <skos:altLabel xml:lang="en">places</skos:altLabel>
+        <skos:altLabel xml:lang="pt">locais</skos:altLabel>
+        <skos:altLabel xml:lang="pt">local</skos:altLabel>
+        <skos:altLabel xml:lang="pt">lugar</skos:altLabel>
+        <skos:altLabel xml:lang="pt">lugares</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geonames.org/ontology/mappings#Agricultural_township -->
+
+    <owl:Class rdf:about="http://www.geonames.org/ontology/mappings#Agricultural_township">
+        <rdfs:label xml:lang="en">Agricultural_township</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">Distrito Agropecuário</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geonames.org/ontology/mappings#Avenue -->
+
+    <owl:Class rdf:about="http://www.geonames.org/ontology/mappings#Avenue">
+        <rdfs:label rdf:datatype="&xsd;language">Avenue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://schema.org/City"/>
+        <skos:altLabel xml:lang="pt">avenida</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geonames.org/ontology/mappings#Camp -->
+
+    <owl:Class rdf:about="http://www.geonames.org/ontology/mappings#Camp">
+        <rdfs:label xml:lang="en">Camp</rdfs:label>
+        <rdfs:label xml:lang="pt">campo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geonames.org/ontology/mappings#Camping -->
+
+    <owl:Class rdf:about="http://www.geonames.org/ontology/mappings#Camping">
+        <rdfs:label rdf:datatype="&xsd;language">Camping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/River"/>
+        <skos:altLabel xml:lang="pt">acampamento</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geonames.org/ontology/mappings#Coast -->
+
+    <owl:Class rdf:about="http://www.geonames.org/ontology/mappings#Coast">
+        <rdfs:label rdf:datatype="&xsd;language">Coast</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">costa</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geonames.org/ontology/mappings#Grove -->
+
+    <owl:Class rdf:about="http://www.geonames.org/ontology/mappings#Grove">
+        <rdfs:label rdf:datatype="&xsd;language">Grove</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">bosque</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geonames.org/ontology/mappings#Higway -->
+
+    <owl:Class rdf:about="http://www.geonames.org/ontology/mappings#Higway">
+        <rdfs:label rdf:datatype="&xsd;language">Higway</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/River"/>
+        <skos:altLabel xml:lang="pt">rodovia</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geonames.org/ontology/mappings#Hydroelectric -->
+
+    <owl:Class rdf:about="http://www.geonames.org/ontology/mappings#Hydroelectric">
+        <rdfs:label xml:lang="en">Hydroelectric</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">hidreletrica</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geonames.org/ontology/mappings#Station -->
+
+    <owl:Class rdf:about="http://www.geonames.org/ontology/mappings#Station">
+        <rdfs:label rdf:datatype="&xsd;language">Station</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">estacao</skos:altLabel>
+        <skos:altLabel xml:lang="pt">estação</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geonames.org/ontology/mappings#Street -->
+
+    <owl:Class rdf:about="http://www.geonames.org/ontology/mappings#Street">
+        <rdfs:label rdf:datatype="&xsd;language">Street</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology/mappings#Higway"/>
+        <skos:altLabel xml:lang="pt">rua</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geonames.org/ontology/mappings#Township -->
+
+    <owl:Class rdf:about="http://www.geonames.org/ontology/mappings#Township">
+        <rdfs:label rdf:datatype="&xsd;language">Township</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Village"/>
+        <rdfs:subClassOf rdf:resource="http://schema.org/City"/>
+        <skos:altLabel xml:lang="pt">vila</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
+    <owl:Class rdf:about="&geosparql;Feature">
+        <rdfs:label xml:lang="en">Feature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geosparql;SpatialObject"/>
+        <owl:disjointWith rdf:resource="&geosparql;Geometry"/>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:description xml:lang="en">
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    </dc:description>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <rdfs:comment xml:lang="en">
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">Feature</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Geometry -->
+
+    <owl:Class rdf:about="&geosparql;Geometry">
+        <rdfs:label xml:lang="en">Geometry</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geosparql;SpatialObject"/>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:definition xml:lang="en">
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    </rdfs:comment>
+        <skos:prefLabel xml:lang="en">Geometry</skos:prefLabel>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:description xml:lang="en">
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    </dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#SpatialObject -->
+
+    <owl:Class rdf:about="&geosparql;SpatialObject">
+        <rdfs:label xml:lang="en">SpatialObject</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:description xml:lang="en">
+      The class spatial-object represents everything that can have 
+      a spatial representation. It is superclass of feature and geometry.
+    </dc:description>
+        <skos:definition xml:lang="en">
+      The class spatial-object represents everything that can have 
+      a spatial representation. It is superclass of feature and geometry.
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      The class spatial-object represents everything that can have 
+      a spatial representation. It is superclass of feature and geometry.
+    </rdfs:comment>
+        <skos:prefLabel xml:lang="en">SpatialObject</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#Caatinga -->
+
+    <owl:Class rdf:about="&Gazetter;Caatinga">
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">caatinga</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/Gazetter#Seringal -->
+
+    <owl:Class rdf:about="&Gazetter;Seringal">
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <skos:altLabel xml:lang="pt">seringal</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="&foaf;Person"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&dc;rights">
+        <rdfs:label xml:lang="en">Rights</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">Information about rights held in and over the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#rights-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;format">
+        <rdfs:label xml:lang="en">Format</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</terms:description>
+        <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;coverage">
+        <rdfs:label xml:lang="en">Coverage</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</terms:description>
+        <rdfs:comment xml:lang="en">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#coverage-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;subject">
+        <rdfs:label xml:lang="en">Subject</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2012-06-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#subject-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;language">
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#language-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;identifier">
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+        <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;type">
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</terms:description>
+        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#type-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/">
+        <terms:modified rdf:datatype="&xsd;date">2012-06-14</terms:modified>
+        <terms:title xml:lang="en">Dublin Core Metadata Element Set, Version 1.1</terms:title>
+        <terms:publisher rdf:resource="http://purl.org/dc/aboutdcmi#DCMI"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;relation">
+        <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relation-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;publisher">
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
+        <terms:description xml:lang="en">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#publisher-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;title">
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#title-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

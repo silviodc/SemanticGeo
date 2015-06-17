@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Silvio/workspace/SemanticGeoSearch/files/commons-codec-1.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Silvio/workspace/SemanticGeoSearch/files/httpclient-4.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Silvio/workspace/SemanticGeoSearch/files/httpcore-4.2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Silvio/workspace/SemanticGeoSearch/files/jcl-over-slf4j-1.6.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Silvio/workspace/SemanticGeoSearch/files/jena-arq-2.11.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Silvio/workspace/SemanticGeoSearch/files/jena-core-2.11.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Silvio/workspace/SemanticGeoSearch/files/jena-iri-1.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Silvio/workspace/SemanticGeoSearch/files/jena-sdb-1.4.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Silvio/workspace/SemanticGeoSearch/files/jena-tdb-1.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Silvio/workspace/SemanticGeoSearch/files/log4j-1.2.16.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Silvio/workspace/SemanticGeoSearch/files/openmap.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Silvio/workspace/SemanticGeoSearch/files/slf4j-api-1.6.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Silvio/workspace/SemanticGeoSearch/files/slf4j-log4j12-1.6.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Silvio/workspace/SemanticGeoSearch/files/xercesImpl-2.11.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Silvio/workspace/SemanticGeoSearch/files/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="files/jersey-bundle-1.18.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jetty"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
